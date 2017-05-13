@@ -25,7 +25,18 @@ In the project there are currently 3 notebooks:
 		might prefer to do preprocessing in undersample, as you have much more information left there.
 		The problem is that undersample takes a long time to run.
 
-## HOW TO GET IT RUNNING
+## GET LAMBDAMART WORKING (Assuming you're working with Anaconda)
+1. Open Anaconda prompt and run the following commands to create a new Python 3.5 environment:
+		conda create -n py35 python=3.5
+		activate py35
+		python -m ipykernel install --user --name py35 --display-name "Python (py35)"
+3. Download the code from https://github.com/jma127/pyltr/tree/master/pyltr
+4. Using the same Anaconda prompt run the following command in the downloaded folder:
+		python setup.py install
+5. To verify whether everything works, start Jupyter notebook, see if you can create a new
+   "Python (py35)" notebook, and then do "import pyltr"
+
+## GET THE DATA
 1. Download the test set from https://www.kaggle.com/c/expedia-personalized-sort/data.
 2. Put it in, the data folder and call it "kaggle_test.csv"
 3. Download the training and test set from VU and put it in data as well
